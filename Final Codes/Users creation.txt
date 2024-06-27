@@ -1,0 +1,16 @@
+CREATE USER department_manager IDENTIFIED BY '12345';
+GRANT SELECT, INSERT, UPDATE, DELETE ON employee_details TO department_manager;
+GRANT SELECT ON airportemployee_phonenumber TO department_manager;
+
+
+CREATE USER Passenger_ IDENTIFIED BY '12345';
+GRANT SELECT ON passengers_flights_details TO Passenger_;
+
+
+CREATE USER Airline_Company_ IDENTIFIED BY '12345';
+GRANT SELECT, UPDATE ON flight TO Airline_Company;
+GRANT SELECT, UPDATE ON passengers_flights_details TO Airline_Company;
+GRANT SELECT, UPDATE ON passenger TO Airline_Company;
+GRANT SELECT, UPDATE ON passengernationality TO Airline_Company;
+GRANT SELECT, UPDATE ON passengerphonenumber TO Airline_Company;
+GRANT SELECT, UPDATE ON passengerflight TO Airline_Company;
